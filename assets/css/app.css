@@ -113,6 +113,12 @@ address {
   font-style: normal;
   line-height: inherit; }
 
+.additional-list {
+	color: white;
+}
+
+
+
 .custom-header {
   list-style-type: none;
   padding: 0;

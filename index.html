@@ -1072,10 +1072,12 @@
 
     <!-- Custom JS to include mobile menu -->
     <script>
-        $(document).ready(function () {
-            // Load nội dung từ file mobile-menu.html vào container
-            $("#mobile-menu-container").load("mobile-menu.html");
-        });
+		$("#mobile-menu-container").load("mobile-menu.html", function() {
+			// Sau khi tải, gọi lại hàm từ main.js
+			if (typeof initOffcanvasMenu === "function") {
+				initOffcanvasMenu(); // Hàm này được định nghĩa trong main.js
+			}
+		});
     </script>
 
 </body>

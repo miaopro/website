@@ -101,8 +101,8 @@
             </div>
             <!-- End Offcanvas Header -->
 
-			<!-- Placeholder for Offcanvas Menu -->
-			<div id="offcanvas-menu-placeholder"></div>
+			<!-- Start Offcanvas Mobile Menu Wrapper -->
+			<div class="offcanvas-mobile-menu-wrapper"></div>
 
 
         </div> <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
@@ -1076,7 +1076,7 @@
 		fetch('offcanvas-menu.html')
 			.then(response => response.text())
 			.then(data => {
-				document.getElementById('offcanvas-menu-placeholder').innerHTML = data;
+				document.getElementById('offcanvas-mobile-menu-wrapper').innerHTML = data;
 			})
 			.catch(error => console.error('Error loading menu:', error));
 			

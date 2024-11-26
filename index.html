@@ -101,8 +101,8 @@
             </div>
             <!-- End Offcanvas Header -->
 
-			<!-- Start Offcanvas Mobile Menu Wrapper -->
-			<div class="offcanvas-mobile-menu-wrapper"></div>
+			<!-- Placeholder for Offcanvas Menu -->
+			<div id="offcanvas-menu-placeholder"></div>
 
 
         </div> <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
@@ -190,16 +190,6 @@
         </div> <!-- ...:::: End Offcanvas Profile Menu Section:::... -->
 
         <div class="offcanvas-overlay"></div>
-
-		<script>
-		// JavaScript to fetch and insert offcanvas menu
-		fetch('offcanvas-menu.html')
-			.then(response => response.text())
-			.then(data => {
-				document.querySelector('.offcanvas-mobile-menu-wrapper').innerHTML = data;
-			})
-			.catch(error => console.error('Error loading menu:', error));
-		</script>
 
         <!-- ...:::Start Search & Filter Section:::... -->
         <div class="search-n-filter-section section-gap-top-25">
@@ -1081,6 +1071,14 @@
             })
         })
 		
+		
+		// JavaScript to fetch and insert offcanvas menu
+		fetch('offcanvas-menu.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('offcanvas-menu-placeholder').innerHTML = data;
+			})
+			.catch(error => console.error('Error loading menu:', error));
 			
     </script>
 

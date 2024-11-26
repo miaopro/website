@@ -84,9 +84,7 @@
         </div>
         <!-- ...:::End User Event Section:::... -->
 
-        <!-- ...:::Inclued html:::... -->
 		<div id="mobile-menu-container"></div>
-		<div id="profile-menu-container"></div>
 
         <div class="offcanvas-overlay"></div>
 
@@ -970,16 +968,13 @@
             })
         })
     </script>
-
-
-    <!-- Custom JS to include mobile menu -->
+	
+	   <!-- Custom JS to include mobile menu -->
     <script>
-		$("#mobile-menu-container").load("mobile-menu.html", function() {
-			// Sau khi tải, gọi lại hàm từ main.js
-			if (typeof initOffcanvasMenu === "function") {
-				initOffcanvasMenu(); // Hàm này được định nghĩa trong main.js
-			}
-		});
+        $(document).ready(function () {
+            // Load nội dung từ file mobile-menu.html vào container
+            $("#mobile-menu-container").load("mobile-menu.html");
+        });
     </script>
 
 </body>
